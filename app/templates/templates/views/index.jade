@@ -16,6 +16,17 @@ html
 	//- HTML BODY
 	body
 		#app
-		script(src='/js/application.js')
+			{{ message }}
+
+			table
+				tr(v-for="user in users")
+					td(class="center")
+						{{ user.name.last }} {{ user.name.first }}
+					td
+						{{ user.email }}
+					td
+						{{ user.isAdmin }}
+
 		script(src='/lib/superagent.js')
 		script(src='/lib/vue.min.js')
+		script(src='/js/application.js')
