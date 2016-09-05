@@ -63,6 +63,7 @@ var KeystoneGenerator = yeoman.generators.Base.extend({
 		publicfiles: function () {
 			this.copy('public/favicon.ico', 'public/favicon.ico');
 			this.directory('public/styles', 'public/styles');
+			this.directory('public/lib', 'public/lib');
 		},
 
 		routesfiles: function () {
@@ -85,9 +86,6 @@ var KeystoneGenerator = yeoman.generators.Base.extend({
 		'\n'
 		);
 		this.npmInstall();
-		this.copy('node_modules/vue/dist/vue.min.js', 'public/lib/vue.min.js');
-		this.copy('node_modules/vue/dist/vue.min.js.map', 'public/lib/vue.min.js.map');
-		this.copy('node_modules/superagent/superagent.js', 'public/lib/superagent.js');
 	},
 
 	end: function () {
