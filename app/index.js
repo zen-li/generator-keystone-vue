@@ -53,7 +53,6 @@ var KeystoneGenerator = yeoman.generators.Base.extend({
 		},
 
 		clientfiles: function () {
-			this.copy('client/scripts/application.js', 'client/scripts/application.js');
 		},
 
 		modelfiles: function () {
@@ -64,6 +63,7 @@ var KeystoneGenerator = yeoman.generators.Base.extend({
 			this.copy('public/favicon.ico', 'public/favicon.ico');
 			this.directory('public/styles', 'public/styles');
 			this.directory('public/lib', 'public/lib');
+			this.directory('public/scripts', 'public/scripts');
 		},
 
 		routesfiles: function () {
